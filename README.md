@@ -45,8 +45,9 @@ key findings:-Repeated issues show fewer breaches than new ones
 Q8 Which 3 months had the highest breaches?
 key findings:-Identified top-3 months for targeted review
 
-- 📈 Exploratory Data Analysis (EDA)
+📈 Exploratory Data Analysis (EDA)
 Three charts visualize key patterns:
+
 Chart 1 — Breach Rate by Category
 
 Chart 2 — Priority vs After-Hours Heatmap
@@ -54,15 +55,9 @@ Chart 2 — Priority vs After-Hours Heatmap
 Chart 3 — Monthly Trend Line
 
 - Machine Learning Model
-Algorithm: Random Forest Classifier
+Algorithm: Random Forest Classifier - Accuracy: ~77%
 
-                  precision    recall    f1-score
-Normal Ticket     ~0.84      ~0.80      ~0.82
-Breach            ~0.65      ~0.71      ~0.68
-
-Accuracy: ~77%
-
-Top Breach Predictors (Feature Importance)
+- Top Breach Predictors (Feature Importance)
 
 resolution_time — longer resolution = higher risk
 category_Malware Alert — highest single-category risk
@@ -74,10 +69,13 @@ after_hours — night-time tickets carry extra risk
 
 Malware and Phishing tickets are crisis-level — 
 nearly 50% of all breaches. These need immediate escalation protocols.
+
 After-hours monitoring is essential — 
 tickets raised outside business hours breach at a 30% rate. An on-call or automated alert system for after-hours high-priority tickets is recommended.
+
 Critical + Malware = automatic escalation — 
 the ML model confirms that the combination of Critical priority and Malware category is the strongest predictor of breach.
+
 Resolution time is the top ML feature — 
 tickets taking longer to resolve are more likely to become breaches. 
 
